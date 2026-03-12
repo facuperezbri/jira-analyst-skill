@@ -66,9 +66,9 @@ function buildMcpJson(creds) {
 const TEMPLATES = path.join(__dirname, '..', 'templates');
 
 function installClaude(cwd, creds) {
-  const skillDest = path.join(cwd, '.claude', 'skills', 'jira-solution-designer', 'SKILL.md');
+  const skillDest = path.join(cwd, '.claude', 'skills', 'jira-analyst-skill', 'SKILL.md');
   copyFile(path.join(TEMPLATES, 'skill', 'SKILL.md'), skillDest);
-  ok('.claude/skills/jira-solution-designer/SKILL.md');
+  ok('.claude/skills/jira-analyst-skill/SKILL.md');
 
   writeFile(path.join(cwd, '.mcp.json'), buildMcpJson(creds));
   ok('.mcp.json');
@@ -214,7 +214,7 @@ async function main() {
   }
 
   if (editors.includes('claude')) {
-    hint(`Claude Code: escribí ${c.cyan('/jira-solution-designer PROJ-123')} en el chat`);
+    hint(`Claude Code: escribí ${c.cyan('/jira-analyst-skill PROJ-123')} en el chat`);
   }
   if (editors.includes('cursor')) {
     hint(`Cursor: escribí ${c.cyan('Analiza el ticket PROJ-123')} en el chat`);

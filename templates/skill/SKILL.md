@@ -1,5 +1,5 @@
 ---
-name: jira-solution-designer
+name: jira-analyst-skill
 description: Analiza tickets de Jira y produce propuestas funcionales o técnicas. Usar cuando el usuario pide analizar un ticket (ej. MDCS-456, JIRA-123), entender un problema, diseñar soluciones, o analizar logs/interfaces CMM pegados en el chat. Escala progresivamente por Jira, Confluence, código y trace viewer antes de preguntar al usuario. Genera un archivo markdown con el análisis completo.
 ---
 

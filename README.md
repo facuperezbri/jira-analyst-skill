@@ -1,33 +1,34 @@
-# jira-analyst-kit
+# Agent Skills
 
-Instala la skill **Jira Solution Designer** en Claude Code y/o Cursor.
+Colección de skills para Claude Code y Cursor.
 
-Analiza tickets de Jira y produce propuestas funcionales o técnicas escalando
-por Jira, Confluence y código antes de preguntarte.
-
-## Uso
+## Instalación
 
 ```bash
-npx jira-analyst-kit
+npx skills add facuperezbri/jira-analyst-skill
 ```
 
-o directamente desde el repositorio:
+Pregunta en qué editores instalar → Claude Code, Cursor, o ambos.
+
+## Skills
+
+| Skill | Descripción |
+|-------|-------------|
+| [jira-analyst-skill](skills/jira-analyst-skill/SKILL.md) | Analiza tickets de Jira y produce propuestas funcionales o técnicas |
+
+## Configuración MCP
+
+Después de instalar, configurar las credenciales:
 
 ```bash
-npx github:TU_ORG/jira-analyst-kit
+# Mac / Linux
+chmod +x setup/mcp-setup.sh && ./setup/mcp-setup.sh
+
+# Windows
+.\setup\mcp-setup.ps1
 ```
 
-El instalador te pregunta:
-
-1. ¿En qué editores instalar? → Claude Code / Cursor / Ambos
-2. ¿Configurar credenciales MCP ahora? → URLs + tokens
-3. Jira, Confluence, Bitbucket (opcional)
-
-Y genera los archivos necesarios en la carpeta actual.
-
-## Prerrequisito
-
-`uv` para el servidor MCP de Atlassian:
+Requiere `uv` para el servidor MCP de Atlassian:
 
 ```bash
 # Mac / Linux
@@ -37,20 +38,11 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-## Archivos generados
-
-| Archivo | Editor |
-|---|---|
-| `.claude/skills/jira-solution-designer/SKILL.md` | Claude Code |
-| `.mcp.json` | Claude Code |
-| `.cursor/rules/jira-analyst.mdc` | Cursor |
-| `.cursor/mcp.json` | Cursor |
-
-## Cómo usarlo luego
+## Uso
 
 **Claude Code**
 ```
-/jira-solution-designer PROJ-123
+/jira-analyst-skill PROJ-123
 ```
 
 **Cursor**

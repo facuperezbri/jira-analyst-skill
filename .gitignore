@@ -1,1 +1,4 @@
-node_modules/
+# Archivos de configuración MCP generados por setup/mcp-setup.sh
+# Contienen credenciales — NO commitear
+.mcp.json
+.cursor/mcp.json

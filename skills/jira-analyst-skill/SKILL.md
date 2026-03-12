@@ -1,6 +1,11 @@
 ---
-description: Analiza tickets de Jira y produce propuestas funcionales o técnicas. Activar cuando el usuario mencione un ticket (ej. MDCS-456, JIRA-123), pida entender un problema, diseñar una solución, o pegue logs/payloads CMM en el chat.
-alwaysApply: false
+name: jira-analyst-skill
+description: Analiza tickets de Jira y produce propuestas funcionales o técnicas. Usar cuando el usuario pide analizar un ticket (ej. MDCS-456, JIRA-123), entender un problema, diseñar soluciones, o analizar logs/interfaces CMM. Escala por Jira, Confluence y código antes de preguntar. Genera un archivo markdown con el análisis.
+license: MIT
+compatibility: Requires mcp-atlassian MCP server configured with Jira and Confluence credentials. Run setup/mcp-setup.sh to configure.
+metadata:
+  author: facuperezbri
+  version: "1.0.0"
 ---
 
 # Jira Solution Designer
